@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital | Gastronomía Moderna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-utensils logo-icon"></i>
+                    <div>
+                        <div class="logo-text">GASTRONOMÍA MODERNA</div>
+                        <div class="logo-subtitle">RESTAURANTE & BAR</div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="cart-btn" id="openCart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Menú Digital</h1>
+            <p class="hero-subtitle">Descubre nuestra selección de platos creados con ingredientes frescos y técnicas innovadoras</p>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <nav class="menu-nav">
+        <div class="container">
+            <div class="category-list">
+                <button class="category-btn active" data-category="all">Todos los platos</button>
+                <button class="category-btn" data-category="entradas">Entradas</button>
+                <button class="category-btn" data-category="principales">Platos principales</button>
+                <button class="category-btn" data-category="ensaladas">Ensaladas</button>
+                <button class="category-btn" data-category="postres">Postres</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Sections -->
+    <main class="container">
+        <!-- Entradas -->
+        <section class="menu-section" id="entradas">
+            <h2 class="section-title">Entradas</h2>
+            <div class="menu-grid">
+                <!-- Item destacado -->
+                <div class="menu-item featured-item" data-category="entradas">
+                    <div class="featured-badge">ESPECIAL DEL CHEF</div>
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Tartar de atún" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Tartar de Atún con Aguacate</h3>
+                            <div class="item-price">$18.900</div>
+                        </div>
+                        <p class="item-description">Atún rojo fresco cortado en cubos con aguacate, cebolla morada, salsa de soja y un toque de wasabi. Acompañado de chips de tortilla.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag gluten-free">Sin gluten</span>
+                            </div>
+                            <button class="add-to-cart" data-id="1" data-name="Tartar de Atún con Aguacate" data-price="18900" data-image="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros items -->
+                <div class="menu-item" data-category="entradas">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Bruschetta" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Bruschetta de Tomate y Albahaca</h3>
+                            <div class="item-price">$12.500</div>
+                        </div>
+                        <p class="item-description">Pan artesanal tostado con tomate fresco, albahaca, ajo y aceite de oliva extra virgen.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag vegan">Vegano</span>
+                            </div>
+                            <button class="add-to-cart" data-id="2" data-name="Bruschetta de Tomate y Albahaca" data-price="12500" data-image="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="entradas">
+                    <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Calamares" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Calamares Fritos Crujientes</h3>
+                            <div class="item-price">$15.800</div>
+                        </div>
+                        <p class="item-description">Calamares frescos rebozados en harina de tempura y fritos al instante. Servidos con salsa alioli y limón.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag spicy">Picante</span>
+                            </div>
+                            <button class="add-to-cart" data-id="3" data-name="Calamares Fritos Crujientes" data-price="15800" data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platos principales -->
+        <section class="menu-section" id="principales">
+            <h2 class="section-title">Platos Principales</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="principales">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1480&q=80" alt="Salmon" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Salmón a la Parrilla con Vegetales</h3>
+                            <div class="item-price">$26.500</div>
+                        </div>
+                        <p class="item-description">Filete de salmón fresco a la parrilla con salsa de eneldo, acompañado de espárragos y puré de papas.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag gluten-free">Sin gluten</span>
+                            </div>
+                            <button class="add-to-cart" data-id="4" data-name="Salmón a la Parrilla con Vegetales" data-price="26500" data-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1480&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="principales">
+                    <img src="https://images.unsplash.com/photo-1598866594230-a7c12756260f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1452&q=80" alt="Pasta" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Pasta Trufada con Champiñones</h3>
+                            <div class="item-price">$22.900</div>
+                        </div>
+                        <p class="item-description">Pasta fresca con salsa cremosa de trufa negra, champiñones portobello y parmesano.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag">Recomendado</span>
+                            </div>
+                            <button class="add-to-cart" data-id="5" data-name="Pasta Trufada con Champiñones" data-price="22900" data-image="https://images.unsplash.com/photo-1598866594230-a7c12756260f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1452&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="principales">
+                    <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Carne" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Lomo de Res con Salsa de Vino Tinto</h3>
+                            <div class="item-price">$32.000</div>
+                        </div>
+                        <p class="item-description">Corte premium de lomo de res a punto, con reducción de vino tinto y hierbas, acompañado de papas rústicas.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag spicy">Picante</span>
+                            </div>
+                            <button class="add-to-cart" data-id="6" data-name="Lomo de Res con Salsa de Vino Tinto" data-price="32000" data-image="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ensaladas -->
+        <section class="menu-section" id="ensaladas">
+            <h2 class="section-title">Ensaladas</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="ensaladas">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&auto=format&fit=crop&w=1384&q=80" alt="Ensalada César" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Ensalada César con Pollo Grille</h3>
+                            <div class="item-price">$18.500</div>
+                        </div>
+                        <p class="item-description">Lechuga romana fresca con pollo a la parrilla, croutons, queso parmesano y aderezo césar casero.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag gluten-free">Sin gluten</span>
+                            </div>
+                            <button class="add-to-cart" data-id="7" data-name="Ensalada César con Pollo Grille" data-price="18500" data-image="https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&auto=format&fit=crop&w=1384&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="ensaladas">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Ensalada de quinoa" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Ensalada de Quinoa y Vegetales</h3>
+                            <div class="item-price">$16.900</div>
+                        </div>
+                        <p class="item-description">Quinoa orgánica con aguacate, tomate cherry, pepino, cebolla morada y aderezo de limón.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag vegan">Vegano</span>
+                                <span class="item-tag gluten-free">Sin gluten</span>
+                            </div>
+                            <button class="add-to-cart" data-id="8" data-name="Ensalada de Quinoa y Vegetales" data-price="16900" data-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Postres -->
+        <section class="menu-section" id="postres">
+            <h2 class="section-title">Postres</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="postres">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Cheesecake" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Cheesecake de Frutos Rojos</h3>
+                            <div class="item-price">$11.500</div>
+                        </div>
+                        <p class="item-description">Tarta de queso cremosa con base de galleta, cubierta con coulis de frutos rojos y frambuesas frescas.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag">Recomendado</span>
+                            </div>
+                            <button class="add-to-cart" data-id="9" data-name="Cheesecake de Frutos Rojos" data-price="11500" data-image="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="postres">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1327&q=80" alt="Volcán de chocolate" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Volcán de Chocolate con Helado</h3>
+                            <div class="item-price">$13.200</div>
+                        </div>
+                        <p class="item-description">Pastel de chocolate caliente con centro líquido, acompañado de helado de vainilla y frutos rojos.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag">Especial</span>
+                            </div>
+                            <button class="add-to-cart" data-id="10" data-name="Volcán de Chocolate con Helado" data-price="13200" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1327&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bebidas -->
+        <section class="menu-section" id="bebidas">
+            <h2 class="section-title">Bebidas</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="bebidas">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1468&q=80" alt="Cóctel" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Cóctel Signature "Gastro Moderno"</h3>
+                            <div class="item-price">$16.500</div>
+                        </div>
+                        <p class="item-description">Mezcla exclusiva de ginebra, licor de flor de saúco, jugo de limón y soda de pepino.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag">Firmado</span>
+                            </div>
+                            <button class="add-to-cart" data-id="11" data-name="Cóctel Signature 'Gastro Moderno'" data-price="16500" data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1468&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bebidas">
+                    <img src="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Vino" class="item-image">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Vino Tinto Reserva Especial</h3>
+                            <div class="item-price">$24.000</div>
+                        </div>
+                        <p class="item-description">Copa de vino tinto reserva, selección especial de la casa. Notas a frutos rojos y especias.</p>
+                        <div class="item-footer">
+                            <div class="item-tags">
+                                <span class="item-tag">Reserva</span>
+                            </div>
+                            <button class="add-to-cart" data-id="12" data-name="Vino Tinto Reserva Especial" data-price="24000" data-image="https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Tu Pedido</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Los items del carrito se agregarán aquí dinámicamente -->
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-cart" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <p>Tu carrito está vacío</p>
+                <p>Agrega algunos platos del menú</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Realizar Pedido</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">GASTRONOMÍA MODERNA</h3>
+                    <p>Restaurante contemporáneo que combina técnicas innovadoras con ingredientes de la más alta calidad.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Gourmet 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@gastro-moderna.com</p>
+                </div>
+                <div class="footer-hours">
+                    <h3 class="footer-title">Horarios</h3>
+                    <p>Lunes a Viernes: 12:00 - 23:00</p>
+                    <p>Sábados y Domingos: 11:00 - 00:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gastronomía Moderna. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
